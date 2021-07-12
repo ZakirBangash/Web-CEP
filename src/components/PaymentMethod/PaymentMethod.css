@@ -1,0 +1,15 @@
+.payment {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.payment > input {
+    margin-right: 20px;
+}
+
+.paymentScreen {
+    width:  100% !important;
+    margin-top:  130px;
+}

@@ -1,56 +1,133 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
+import SideNav from "./components/SideNav/SideNav";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Cart from "./components/Cart/Cart";
+import SigninScreen from "./components/SignIn/SigninScreen";
+import RegisterScreen from "./components/Register/RegisterScreen";
+import ShippingAddressScreen from "./components/Shipping/ShippingScreen";
+import PaymentMethodScreen from "./components/PaymentMethod/PaymentMethodScreen";
+import PlaceOrderScreen from "./components/Order/PlaceOrder";
+import GatewayStripe from "./components/GatewayStripe";
+import Footer from './components/Footer/Footer'
+import NotFound from "./NotFound";
+import Search from './components/Search/Search'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="app">
+              <SideNav />
+              <Home />
+            </div>
+          }
+        />
+        <Route
+          path="checkout"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <Cart />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="signin"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <SigninScreen />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="register"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <RegisterScreen />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="shipping"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <ShippingAddressScreen />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="payment"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <PaymentMethodScreen />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="placeOrder"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <PlaceOrderScreen />
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="stripe"
+          element={
+            <>
+              <div className="h1">
+                <GatewayStripe />
+              </div>
+            </>
+          }
+        />
+
+        <Route
+          path="search"
+          element={
+            <>
+              <SideNav />
+              <div className="h1">
+                <Search />
+              </div>
+            </>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <>
+              <div className="h1">
+                <NotFound />
+              </div>
+            </>
+          }
+        />
+      </Routes>
     </div>
   );
 }

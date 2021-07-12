@@ -1,0 +1,33 @@
+.container {
+    padding: 30px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.stripe-img {
+    width: 60%;
+}
+
+.stripe-btn {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StripeCheckout {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 30px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .stripe-btn {
+        margin-top: 30px;
+    }
+}

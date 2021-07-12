@@ -1,0 +1,101 @@
+.searchPage {
+    flex: 0.8;    
+    background-color: #f9f9f9 !important;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.searchPage__filter {
+    display: flex;
+    color: black !important;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchPage__filter > h4 {
+    margin-left: 10px !important;
+    color: black;
+}
+
+.searchPage__divider {
+    color: red !important;
+}
+
+.searchPage__divider {
+   margin-top: 10px;
+}
+
+.content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    flex: 0.3;
+    margin-left: 50px;
+}
+
+.right {
+    flex: 0.7;
+}
+
+.right-title {
+    letter-spacing: 3.7px;
+    font-weight: bold;
+    font-size: 48px !important;
+    margin-bottom: 32px;
+}
+
+.right-price {
+    font-weight: bold;
+    font-size: 36px !important;
+    margin-top: 48px;
+}
+
+
+.right-btn {
+    margin-top: 60px !important;
+    background-color: #F3A847 !important;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+ 
+    .content {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+.left {
+    margin: 10px auto;
+}
+
+.right {
+    margin: 10px auto;
+}   
+}
+
+.imgSvg {
+    width: 50%;
+}
+
+.search-notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-notFound > h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
