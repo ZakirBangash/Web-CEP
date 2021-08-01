@@ -10,7 +10,6 @@ import ShippingAddressScreen from "./components/Shipping/ShippingScreen";
 import PaymentMethodScreen from "./components/PaymentMethod/PaymentMethodScreen";
 import PlaceOrderScreen from "./components/Order/PlaceOrder";
 import GatewayStripe from "./components/GatewayStripe";
-import Footer from './components/Footer/Footer'
 import NotFound from "./NotFound";
 import Search from './components/Search/Search'
 
@@ -19,8 +18,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route
-          path="/"
+        <Route path="/"
           element={
             <div className="app">
               <SideNav />
@@ -28,8 +26,7 @@ function App() {
             </div>
           }
         />
-        <Route
-          path="checkout"
+        <Route path="checkout"
           element={
             <>
               <SideNav />
@@ -39,8 +36,8 @@ function App() {
             </>
           }
         />
-        <Route
-          path="signin"
+
+        <Route path="signin"
           element={
             <>
               <SideNav />
@@ -50,8 +47,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="register"
+        <Route path="register"
           element={
             <>
               <SideNav />
@@ -61,8 +57,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="shipping"
+        <Route path="shipping"
           element={
             <>
               <SideNav />
@@ -72,8 +67,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="payment"
+        <Route path="payment"
           element={
             <>
               <SideNav />
@@ -83,8 +77,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="placeOrder"
+        <Route path="placeOrder"
           element={
             <>
               <SideNav />
@@ -94,8 +87,7 @@ function App() {
             </>
           }
         />
-        <Route
-          path="stripe"
+        <Route path="stripe"
           element={
             <>
               <div className="h1">
@@ -105,20 +97,18 @@ function App() {
           }
         />
 
-        <Route
-          path="search"
+        <Route path="search"
           element={
             <>
               <SideNav />
-              <div className="h1">
+              <div className="searchcom">
                 <Search />
               </div>
             </>
           }
         />
 
-        <Route
-          path="*"
+        <Route path="*"
           element={
             <>
               <div className="h1">

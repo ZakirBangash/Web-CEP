@@ -10,10 +10,6 @@ import imageSvg from './404.svg';
 
 const Search = () => {
     const product = useSelector(searchProduct);
-    const [loader, setloader] = useState(false);
-    const [notFound, setnotFound] = useState(false);
-
-    console.log(product.length)
 
     const override = css`
     display: flex;
@@ -23,17 +19,7 @@ const Search = () => {
     border-color: red;
   `;
 
-
-
     useEffect(() => {
-         product.length == 0? console.log("yes"):console.log("No"
-         )
-
-         if (product.message) {
-             setnotFound(true);
-             setloader(false);
-             console.log("This is Zkair")
-         }
     }, [product])
 
     return (
@@ -69,9 +55,6 @@ const Search = () => {
             </div>
                 </>
             )}
-
-            
-
 
         </div>
     )

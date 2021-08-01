@@ -5,8 +5,6 @@ import { getUser } from '../../app/actions/userActions';
 import {selectUser} from '../../features/counter/eCommerceSlice'
 import { useNavigate } from 'react-router-dom';
 import './SigninScreen.css';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Button from '@material-ui/core/Button';
 import MessageBox from '../MessageBox';
 import { css } from "@emotion/react";
@@ -20,7 +18,6 @@ export default function SigninScreen(props) {
   const [password, setPassword] = useState('');
   const userInfo = useSelector(selectUser);
   const [loading, setLoading] = useState(false);
-    console.log(userInfo)
 
   const dispatch = useDispatch();
 
@@ -87,7 +84,6 @@ const override = css`
         <div>
           <label />
           <div>
-        {/* {error && "jadkldf"} */}
             New customer? <Link to="/register">Create your account</Link>
           </div>
         </div>

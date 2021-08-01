@@ -30,21 +30,15 @@ export default function PlaceOrderScreen(props) {
   let shippingPrice = 35235;
   let taxPrice = 234;
 
-
     const Prices = basket.map(item => item.price);
     let subTotal = Prices.reduce((acc, item) => (acc += item), 0).toFixed(2);
-
-
     let TotalPrice  = subTotal + shippingPrice + taxPrice;
-
   
   return (
 
     <div className="placeOrderPage">
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <div className="placeOrder">
-
-
         <div className="order-left">
           <Card className="order-card">
             <CardContent>
@@ -71,6 +65,7 @@ export default function PlaceOrderScreen(props) {
               <h2>Order Items</h2>
               {basket.map((item, i) => (
                 <img
+                key={i}
                 src={item.image}
                 alt={item.name}
                 className="small"

@@ -31,8 +31,6 @@ export default function RegisterScreen(props) {
     }
   };
 
-
-  
   useEffect(() => {
     if(userInfo.message){
       setLoading(false);
@@ -41,12 +39,6 @@ export default function RegisterScreen(props) {
       navigate(-1);
     }
   }, [userInfo]);
-
-//   useEffect(() => {
-//     if (userInfo) {
-//       props.history.push(redirect);
-//     }
-//   }, [props.history, redirect, userInfo]);
 
 const override = css`
   display: flex;
@@ -63,11 +55,8 @@ const override = css`
         <div>
           <h1 className="register-heading">Create Account</h1>
         </div>
-        {/* {loading && <LoadingBox></LoadingBox>}
-        {error && <MessageBox variant="danger">{error}</MessageBox>} */}
            {userInfo.message && <MessageBox variant="danger">{userInfo.message}</MessageBox>}
         <PuffLoader color='#9013FE' loading={loading} css={override} size={50} />
-
         <div>
           <label htmlFor="name">Name</label>
           <input

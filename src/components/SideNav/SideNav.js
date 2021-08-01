@@ -1,5 +1,4 @@
 import React,{useState,useEffect } from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -94,21 +93,8 @@ useEffect(() => {
   }
 
   const searching = () => {
-    // const fetchData = async () => {
-    //   try {
-    //     const { data } = await instance.get(`/api/products/${value}`);
-    //     console.log(data)
-    //     return data;   
-    //   }catch(error) {
-    //     console.log(error)
-    //   }
-      
-    // }
-    
     dispatch(getOnlyProduct({value}))
-    // fetchData();
     navigate('/search');
-   
   }
 
   const drawer = (
@@ -188,8 +174,6 @@ useEffect(() => {
                         </Link>
                      )}
 
-                    
-
                      <Link to="/checkout">
                      <div className="header__optionBasket">
                          <ShoppingBasketIcon />
@@ -236,6 +220,5 @@ useEffect(() => {
     </div>
   );
 }
-
 
 export default ResponsiveDrawer;

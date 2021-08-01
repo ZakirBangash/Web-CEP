@@ -9,10 +9,8 @@ export default function ShippingAddressScreen(props) {
   const userInfo = useSelector(selectUser);
   let navigate = useNavigate();
 
-
   useEffect(() => {
     if (userInfo.name == undefined) {
-      console.log("Zakir in in screen")
       navigate('/signin')
       }  
   }, [userInfo])

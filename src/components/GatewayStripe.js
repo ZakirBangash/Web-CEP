@@ -5,8 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { addProduct, removeProduct, selectCount,emptyCart } from '../features/counter/eCommerceSlice'
+import { useDispatch } from 'react-redux';
+import {emptyCart } from '../features/counter/eCommerceSlice'
 import stripeImg from './stripe.svg'
 import './GatewayStripe.css'
 
@@ -18,23 +18,23 @@ toast.configure();
 const GatewayStripe = () => {
     let navigate = useNavigate();
     const dispatch = useDispatch();
+    console.log("ontoken")
 const onToken = async (token) => {
-        console.log("onToken this is me")
     const product = {name:"All Products", price: 2343};
-    const response = await instance.post('/stripe', {
+   const response = await instance.post('/stripe', {
         product,
         token
-    });
+    }); 
+    console.log(response)
  
   const {status} = response;
+  console.log(status)
     if(status == 200){
         dispatch(emptyCart())
         navigate('/')
         toast.success("You have paid successfully", {position: toast.POSITION.TOP_RIGHT})
     }
-
 }
-
     return (
         <div>
             <div className="container">
@@ -43,7 +43,7 @@ const onToken = async (token) => {
             <div className="stripe-btn">
             <StripeCheckout
                 token={onToken}
-                stripeKey="pk_test_51JATreSEBOVDsL0W7t5E2Jrcik0BqSpzbe9kppTz8kOPgfgIRCVEmGJgZ7SqOA9BYzP7GjXiwaSKFR8ZAuCNhTep00jcYm3fp3"
+                stripeKey="pk_test_51JATreSEBOVDsL0WOGvJDCqj6edQ1DeEkYD6a8NAxhWUA3lgQ0XsXeLnNAgXbcCBp7iQ4b3gEKAfrLXapWzx27z900FrbXZspN"
                 amount={3343 * 100}
                 billingAddress
                 shippingAddress

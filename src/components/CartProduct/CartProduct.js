@@ -7,8 +7,6 @@ import Button from '@material-ui/core/Button';
 const CartProduct = ({id,title,price,rating,image}) => {
     const dispatch = useDispatch();    
 
-
-
 const removeFromBasket = () => {
     console.log(id)
     dispatch(removeProduct(id));
@@ -25,11 +23,9 @@ const removeFromBasket = () => {
                     </p>
                     <div className="cartProduct__rating">
                         {Array(rating).fill().map((_,i) =>(
-                            <p>✨</p>
+                            <p>⭐</p>
                         ))}
-                    </div>
-                   
-               
+                    </div>               
                 <Button onClick={removeFromBasket}>Remove from basket</Button>
             </div>
         </div>

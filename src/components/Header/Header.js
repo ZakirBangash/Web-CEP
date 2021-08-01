@@ -125,11 +125,6 @@ const Header = () => {
         <SearchIcon className="header__searchIcon" />
       </div>
 
-      {/* <div className="header__option">
-                <span className="header__optionLineOne">Hello</span>
-                <span className="header__optionLineTwo">Zakir</span>
-            </div> */}
-
       <div className="header__option">
         <span className="header__optionLineOne">Hello</span>
         <span className="header__optionLineTwo">SignUp</span>
